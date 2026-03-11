@@ -2,47 +2,48 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Links</title>
+<title>My Websites</title>
 
 <style>
 
 body{
-font-family: Arial, sans-serif;
-background: linear-gradient(135deg,#4facfe,#00f2fe);
-margin:0;
-padding:40px;
-text-align:center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#4facfe,#00f2fe);
+  margin:0;
+  padding:40px;
+  text-align:center;
 }
 
 h1{
-color:white;
-margin-bottom:40px;
+  color:white;
+  margin-bottom:40px;
+  font-size:48px;
 }
 
 #links{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
 }
 
 .link{
-background:white;
-padding:20px 30px;
-border-radius:12px;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
-font-size:20px;
-transition:0.2s;
+  background:white;
+  padding:20px 30px;
+  border-radius:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+  font-size:22px;
+  transition:0.2s;
 }
 
 .link:hover{
-transform:scale(1.08);
+  transform:scale(1.08);
 }
 
 .link a{
-text-decoration:none;
-color:#333;
-font-weight:bold;
+  text-decoration:none;
+  color:#333;
+  font-weight:bold;
 }
 
 </style>
@@ -50,7 +51,7 @@ font-weight:bold;
 
 <body>
 
-<h1>My Links</h1>
+<h1>My Websites</h1>
 
 <div id="links"></div>
 
@@ -60,18 +61,18 @@ fetch("links.json")
 .then(response => response.json())
 .then(data => {
 
-const container = document.getElementById("links");
+  const container = document.getElementById("links");
 
-data.forEach(link => {
+  data.forEach(link => {
 
-const box = document.createElement("div");
-box.className = "link";
+    const box = document.createElement("div");
+    box.className = "link";
 
-box.innerHTML = `<a href="${link.url}" target="_blank">${link.name}</a>`;
+    box.innerHTML = `<a href="${link.url}" target="_blank">${link.name}</a>`;
 
-container.appendChild(box);
+    container.appendChild(box);
 
-});
+  });
 
 });
 
